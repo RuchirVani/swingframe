@@ -17,7 +17,7 @@ import jxl.read.biff.File;
 *
 * @author rvani
 */
-public class logdata implements ItemListener,ActionListener {
+public class StartActivity implements ItemListener,ActionListener {
 	
 	
 	static Accerssing_excel_file file1;
@@ -46,10 +46,10 @@ public class logdata implements ItemListener,ActionListener {
 	      JMenuBar menubar= new JMenuBar();
 	      JMenu menu=new JMenu("Options");
 	      JMenuItem byType=new JMenuItem("By Type");
-	      byType.addActionListener(new logdata());
+	      byType.addActionListener(new StartActivity());
 	      menu.add(byType);
 	      JMenuItem byLocation=new JMenuItem("By Location");
-	      byLocation.addActionListener(new logdata());
+	      byLocation.addActionListener(new StartActivity());
 	      menu.add(byLocation);
 	      
 	      menubar.add(menu);
@@ -70,7 +70,7 @@ public class logdata implements ItemListener,ActionListener {
 	      for(int i=0; i<file1.diffrentTypes().size();i++)
 	      {
 	    	  c = new JCheckBox(file1.diffrentTypes().get(i));
-	    	  c.addItemListener(new logdata());
+	    	  c.addItemListener(new StartActivity());
 	    	  typePanel.add(c);
 	      }
 	      JScrollPane p1= new JScrollPane(typePanel);
@@ -95,7 +95,7 @@ public class logdata implements ItemListener,ActionListener {
 	      for(int i=0; i<file1.diffrentLocations().size();i++)
 	      {
 	    	  c2 = new JCheckBox(file1.diffrentLocations().get(i));
-	    	  c2.addItemListener(new logdata());
+	    	  c2.addItemListener(new StartActivity());
 	    	  locationPanel.add(c2);
 	      }
 	      JScrollPane p2= new JScrollPane(locationPanel);
